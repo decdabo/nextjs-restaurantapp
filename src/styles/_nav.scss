@@ -1,0 +1,40 @@
+.burguer {
+  @include ui-button();
+  top: 1%;
+  right: 1%;
+}
+
+.nav {
+  @include ui-container();
+  left: -100%;
+  top: 0%;
+  &_active {
+    left: 0;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    & li {
+      @include center-content();
+      height: 33.333%;
+      font-size: 30px;
+      transition: all .5s;
+      width: 50%;
+      &:hover {
+        background-color: lighten($color: #1b1b1bab, $amount: 50);
+      }
+      & a {
+        @include center-content();
+        color: $yellow;
+        cursor: pointer;
+        height: 100%;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}

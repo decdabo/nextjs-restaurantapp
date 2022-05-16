@@ -1,0 +1,78 @@
+.carousel {
+  @include center-content();
+  background-color: $black;
+  height: 55%;
+  width: 100%;
+}
+
+
+
+
+// -----------------------------------------
+// slick slider config
+
+.slick-slider {
+  background-color: $black;
+  width: 80%;
+  height: 100%;
+  & .slick-list {
+    height: 100%;
+    & .slick-track {
+      height: 100%;
+      & .slick-slide {
+        height: 100%;
+        & div {
+          height: 100%;
+          & div {
+            // padding: 4%; 
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel_item-menu {
+  border-radius: 3px;
+  margin: auto;
+  background-color: $grey;
+  width: 60%;
+  height: 50%;
+  & .item_logo {
+    @include center-content();
+    height: 40% !important;
+    width: 100%;
+    & i {
+      color: $black;
+      font-size: 70px;
+    }
+  }
+  & .item_text {
+    @include center-content();
+    color: $black;
+    height: 60% !important;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    width: 100%;
+    & h1 {
+      font-size: 40px;
+      height: 20%;
+    }
+    & p {
+      @include center-content();
+      font-size: large;
+      height: 10%;
+      & p {
+        color: $yellow;
+        margin-left: 15px;
+      }
+    }
+    & button {
+      @include ui-button();
+      position: relative;
+      width: 15%;
+    }
+  }
+}
