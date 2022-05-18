@@ -4,11 +4,11 @@ module.exports = {
   exportPathMap: function () {
     return {
       "/": { page: "/" },
-      "/burguer": { page: "/burguer" },
-      "/pizza": { page: "/pizza" },
-      "/coffee": { page: "/coffee" },
-      "/oriental": { page: "/about" },
-      "/deserts": { page: "/deserts" }
+      "/burguer": { page: "/[food]" },
+      "/pizza": { page: "/[food]" },
+      "/coffee": { page: "/[food]" },
+      "/oriental": { page: "/[food]" },
+      "/deserts": { page: "/[food]" }
     }
   },
   //assetPrefix: '',
