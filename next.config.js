@@ -1,3 +1,4 @@
+const path = require('path');
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
@@ -33,4 +34,10 @@ module.exports = {
     // Important: return the modified config
     return config
   }, */
+}
+
+module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 }
