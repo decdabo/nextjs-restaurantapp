@@ -33,7 +33,7 @@ export const Navbar = ({ isActive, setNavState }) => {
       <nav className={`nav ${isActive && 'nav_active'}`}>
         <ul>
           <li onClick={() => handleToggleMenu(isActive, setNavState)}>
-            <Link href="/" as={process.env.BASE_URL + '/'}>
+            <Link href="/" as={process.env.BACKEND_URL + '/'}>
               home
             </Link>
           </li>
@@ -41,7 +41,7 @@ export const Navbar = ({ isActive, setNavState }) => {
             allLinks.map( item => {
               return (
                 <li onClick={() => handleToggleMenu(isActive, setNavState)}>
-                  <Link href={{ pathname: '[food]', query: { food: item.link } }} as={`${process.env.BASE_URL}/${item.link}`}>
+                  <Link href={{ pathname: '[food]', query: { food: item.link } }} as={`${process.env.BACKEND_URL}/${item.link}`}>
                     { item.name }
                   </Link>
                 </li>
