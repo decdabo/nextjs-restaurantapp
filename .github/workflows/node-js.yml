@@ -31,6 +31,12 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
+    
+    - name: Upload Artifacts 🔺 # The project is then uploaded as an artifact named 'site'.
+      uses: actions/upload-artifact@v1
+      with:
+          name: site
+          path: out
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.3.3
