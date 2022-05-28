@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { closeCartMenu, openCartMenu } from '../../context/actions/cartActions';
 import { useCart } from '../../context/CartContext';
 import { CartItem } from './CartItem';
-import { ModalApp } from './ModalApp';
+import { ModalApp } from '../ui/ModalApp';
 
 export const CartApp = () => {
   const { cartState: { isActive, data, total }, cartDispatch } = useCart()

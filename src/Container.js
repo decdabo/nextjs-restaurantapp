@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Navbar } from "./components/ui/Navbar";
 import { FooterApp } from "./components/ui/FooterApp";
 import { useNav } from "./context/NavContext";
-import { CartApp } from "./components/ui/CartApp";
+import { CartApp } from "./components/Cart/CartApp";
 
 export const Container = ({ children }) => {
   const { isActive, setNavState } = useNav();

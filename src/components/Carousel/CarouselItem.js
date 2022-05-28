@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { addItemToCart } from "../../context/actions/cartActions";
 import { useCart } from "../../context/CartContext";
 
@@ -7,6 +8,7 @@ export const CarouselItem = ({ item }) => {
 
   const handleAddToCart = () => {
     cartDispatch(addItemToCart(item))
+    toast.success('Agregado al carrito')
   }
   return (
     <div>
